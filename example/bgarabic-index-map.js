@@ -94,7 +94,7 @@ function loadtoc(json) {
             var pll = '';
             if ("category" in entry) {
                for (var k = 0; k < entry.category.length; k++) {
-                  pll += '<a href="javascript:filterPosts(\'' + entry.category[k].term + '\');" title="إضغط هنا لفتح جميع موضوعات القسم \'' + entry.category[k].term + '\'">' + entry.category[k].term + '</a>,  ';
+                  pll += '<a href="javascript:filterPosts(\'' + entry.category[k].term + '\');" title="عرض جميع مواضيع القسم \'' + entry.category[k].term + '\'">' + entry.category[k].term + '</a>,  ';
                }
             var l = pll.lastIndexOf(',');
             if (l != -1) { pll = pll.substring(0,l); }
@@ -155,7 +155,7 @@ function displayToc(filter) {
    var tocHead1 = 'عنوان الموضوع';
    var tocTool1 = 'إضغط للعرض بحسب العنوان';
    var tocHead2 = 'تاريخ الموضوع';
-   var tocTool2 = 'اضغط ليتم الترتيب بحسبا لتاريخ';
+   var tocTool2 = 'إضغط للعرض بحسب التاريخ';
    var tocHead3 = 'الأقسام';
    var tocTool3 = '';
    if (sortBy == "titleasc") { 
@@ -203,7 +203,7 @@ function displayToc(filter) {
    }
    tocTable += '</table>';
    if (numDisplayed == postTitle.length) {
-      var tocNote = '<span class="toc-note">عدد المواضيع ' + postTitle.length + ' موضوع<br/></span>'; }
+      var tocNote = '<span class="toc-note">العدد الكلي: ' + postTitle.length + ' موضوع<br/></span>'; }
    else {
       var tocNote = '<span class="toc-note">Displaying ' + numDisplayed + ' posts labeled \'';
       tocNote += postFilter + '\' of '+ postTitle.length + ' posts total<br/></span>';
