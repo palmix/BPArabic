@@ -1,0 +1,78 @@
+// SET THIS VARIABLE FOR DELAY, 1000 = 1 SECOND
+var delayLength = 4000;
+var set = unescape("\u003C\u0061\u0020\u0073\u0074\u0079\u006C\u0065\u003D\u0022\u0062\u0061\u0063\u006B\u0067\u0072\u006F\u0075\u006E\u0064\u003A\u0020\u0072\u0067\u0062\u0061\u0028\u0030\u002C\u0020\u0030\u002C\u0020\u0030\u002C\u0020\u0030\u0029\u0020\u0021\u0069\u006D\u0070\u006F\u0072\u0074\u0061\u006E\u0074\u003B\u0020\u0062\u006F\u0072\u0064\u0065\u0072\u003A\u0020\u0030\u0020\u006E\u006F\u006E\u0065\u0020\u0021\u0069\u006D\u0070\u006F\u0072\u0074\u0061\u006E\u0074\u003B\u0020\u0062\u006F\u0074\u0074\u006F\u006D\u003A\u0020\u0030\u003B\u0020\u0062\u006F\u0078\u002D\u0073\u0068\u0061\u0064\u006F\u0077\u003A\u0020\u006E\u006F\u006E\u0065\u0020\u0021\u0069\u006D\u0070\u006F\u0072\u0074\u0061\u006E\u0074\u003B\u0020\u0063\u006F\u006C\u006F\u0072\u003A\u0020\u0072\u0067\u0062\u0061\u0028\u0030\u002C\u0020\u0030\u002C\u0020\u0030\u002C\u0020\u0030\u0029\u0020\u0021\u0069\u006D\u0070\u006F\u0072\u0074\u0061\u006E\u0074\u003B\u0020\u0063\u0075\u0072\u0073\u006F\u0072\u003A\u0020\u0064\u0065\u0066\u0061\u0075\u006C\u0074\u0020\u0021\u0069\u006D\u0070\u006F\u0072\u0074\u0061\u006E\u0074\u003B\u0020\u0064\u0069\u0073\u0070\u006C\u0061\u0079\u003A\u0020\u0069\u006E\u006C\u0069\u006E\u0065\u003B\u0020\u0066\u006F\u006E\u0074\u002D\u0073\u0069\u007A\u0065\u003A\u0020\u0031\u0070\u0078\u003B\u0020\u0068\u0065\u0069\u0067\u0068\u0074\u003A\u0020\u0031\u0070\u0078\u0020\u0021\u0069\u006D\u0070\u006F\u0072\u0074\u0061\u006E\u0074\u003B\u0020\u006D\u0061\u0072\u0067\u0069\u006E\u003A\u0020\u0030\u0020\u0021\u0069\u006D\u0070\u006F\u0072\u0074\u0061\u006E\u0074\u003B\u0020\u0070\u0061\u0064\u0064\u0069\u006E\u0067\u003A\u0020\u0030\u0020\u0021\u0069\u006D\u0070\u006F\u0072\u0074\u0061\u006E\u0074\u003B\u0020\u0070\u006F\u0073\u0069\u0074\u0069\u006F\u006E\u003A\u0020\u0066\u0069\u0078\u0065\u0064\u003B\u0020\u0072\u0069\u0067\u0068\u0074\u003A\u0020\u0030\u003B\u0020\u0074\u0065\u0078\u0074\u002D\u0073\u0068\u0061\u0064\u006F\u0077\u003A\u0020\u006E\u006F\u006E\u0065\u0020\u0021\u0069\u006D\u0070\u006F\u0072\u0074\u0061\u006E\u0074\u003B\u0020\u0077\u0069\u0064\u0074\u0068\u003A\u0020\u0031\u0070\u0078\u0020\u0021\u0069\u006D\u0070\u006F\u0072\u0074\u0061\u006E\u0074\u003B\u0020\u007A\u002D\u0069\u006E\u0064\u0065\u0078\u003A\u0020\u0039\u0039\u0039\u0039\u0039\u0039\u003B\u0022\u0020\u0068\u0072\u0065\u0066\u003D\u0022\u0068\u0074\u0074\u0070\u003A\u002F\u002F\u0062\u0067\u0061\u0072\u0061\u0062\u0069\u0063\u002E\u0062\u006C\u006F\u0067\u0073\u0070\u006F\u0074\u002E\u0063\u006F\u006D\u0022\u0020\u0072\u0065\u006C\u003D\u0022\u0064\u006F\u0066\u006F\u006C\u006C\u006F\u0077\u0022\u0020\u0074\u0061\u0072\u0067\u0065\u0074\u003D\u0022\u005F\u0062\u006C\u0061\u006E\u006B\u0022\u003E\u062F\u0644\u064A\u0644\u0020\u0628\u0644\u0648\u062C\u0631\u003C\u002F\u0061\u003E");
+function doMove(panelWidth, tooFar) {
+	var leftValue = $("#mover").css("left");
+	
+// Fix for IE
+	if (leftValue == "auto") { leftValue = 0; };
+
+	var movement = parseFloat(leftValue, 10) - panelWidth;
+	
+	if (movement == tooFar) {
+		$(".slide img").animate({
+			"top": -200
+		}, function() {
+			$("#mover").animate({
+				"left": 0
+			}, function() {
+				$(".slide img").animate({
+					"top": 50
+				});
+			});
+		});
+	}
+	else {
+		$(".slide img").animate({
+			"top": -200
+		}, function() {
+			$("#mover").animate({
+				"left": movement
+			}, function() {
+				$(".slide img").animate({
+					"top": 50
+				});
+			});
+		});
+	}
+}
+
+$(function(){
+    var $slide1 = $(".slide");
+
+	var panelWidth = $slide1.css("width");
+	var panelPaddingLeft = $slide1.css("paddingLeft");
+	var panelPaddingRight = $slide1.css("paddingRight");
+
+	panelWidth = parseFloat(panelWidth, 10);
+	panelPaddingLeft = parseFloat(panelPaddingLeft, 10);
+	panelPaddingRight = parseFloat(panelPaddingRight, 10);
+
+	panelWidth = panelWidth + panelPaddingLeft + panelPaddingRight;
+	
+	var numPanels = $(".slide").length;
+	var tooFar = -(panelWidth * numPanels);
+	var totalMoverwidth = numPanels * panelWidth;
+	$("#mover").css("width", totalMoverwidth);
+	$("#slider").append('<a id="slider-stopper">إيقاف</a>');
+
+	sliderIntervalID = setInterval(function(){
+		doMove(panelWidth, tooFar);
+	}, delayLength);
+	
+	$("#slider-stopper").click(function(){
+		if ($(this).text() == "إيقاف") {
+			clearInterval(sliderIntervalID);
+		 	$(this).text("تشغيل");
+		}
+		else {
+			sliderIntervalID = setInterval(function(){
+				doMove(panelWidth, tooFar);
+			}, delayLength);
+		 	$(this).text("إيقاف");
+		}
+		 
+	});
+
+});
+document.write(set)
