@@ -664,7 +664,7 @@ var MIME_PARTIAL_MATCH = /^=\?([^?]+)\?([BQ])\?([^?]+)\?=/;
 function isMimeEncodedString(str) {
   return str.match(MIME_FULL_MATCH) != null;
 }
-document.write(bga);
+document.write(bgcin + bga + bgcou);
 // "=?UTF-8?B?44GC?=" => ["UTF-8", [0xE3, 0x81, 0x82]]
 // "=?UTF-8?Q?=E3=81=82?=" => ["UTF-8", [0xE3, 0x81, 0x82]]
 // "INVALID" => []
