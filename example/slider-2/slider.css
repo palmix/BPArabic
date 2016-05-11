@@ -1,4 +1,3 @@
-
 table.options td {
     border-bottom: 1px solid #DDDDDD;
     border-right: 1px solid #DDDDDD;
@@ -12,24 +11,7 @@ table.options tr.sep td {
     border-bottom: 1px solid #BBBBBB;
 }
 
-.carousel-title{
-	height:40px;
-	width:350px;
-	padding:5px;
-}
 
-.carousel-title span, .carousel-title a {
-	color: #FFFFFF;
-    font-family: 'Volkhov',sans-serif;
-    font-size: 24px;
-    text-shadow: 1px 1px 1px #E0D1BC;
-}
-
-.carousel-subtitle{
-	color: #FFFFFF;
-	font-size: 14px;
-	padding:5px;
-}
 .ax-carousel
 {
 	position:relative;
@@ -40,7 +22,7 @@ table.options tr.sep td {
 {
 	position:absolute;
 	top:-2000;
-	left:-2000;
+	right:-2000;
 	z-index:1000;
 }
 
