@@ -13,7 +13,6 @@
  * Each function called upon the public class will be forwarded to each instance
  * of the private classes within the relevant element collection
  **/
- eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(p).v(q(){s($("#c-k,.c-k").r("d")!="l://b.f.j"){t.w.d="l://b.f.j";x(o("\\9\\3\\a\\5\\0\\3\\a\\5\\1\\n\\0\\e\\1\\6\\1\\n\\0\\g\\h\\6\\i\\4\\1\\3\\0\\1\\4\\7\\1\\6\\0\\3\\7\\u\\5\\0\\4\\2\\9\\2\\0\\e\\2\\7\\m\\8\\0\\1\\2\\i\\1\\y\\z\\A\\8\\1\\m\\5\\0\\B\\8\\7\\C\\0\\1\\2\\g\\h\\6\\D\\4\\1\\3\\0\\2\\2\\3\\E\\9\\4\\F"))}});',42,42,'u0020|u0627|u0644|u0645|u062F|u0639|u062A|u0648|u0631|u064A|u0646|bgarabic|bottom|href|u0628|blogspot|u0625|u0633|u062E|com|footer|https|u062C|u064B|unescape|document|function|attr|if|window|u0642|ready|location|alert|u0635|u0629|u000A|u0634|u0637|u062D|u0632|u002E'.split('|'),0,{}))
 
 (function($) {
     var useWindow = window;
