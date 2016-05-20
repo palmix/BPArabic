@@ -803,22 +803,22 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
         time: {
             Days: {
                 show: true,
-                text: unescape("\u064A\u0648\u0645"),
+                text: "يوم",
                 color: "#ffdd05"
             },
             Hours: {
                 show: true,
-                text: unescape("\u0633\u0627\u0639\u0629"),
+                text: "ساعة",
                 color: "#238ffb"
             },
             Minutes: {
                 show: true,
-                text: unescape("\u062F\u0642\u064A\u0642\u0629"),
+                text: "دقيقة",
                 color: "#35f340"
             },
             Seconds: {
                 show: true,
-                text: unescape("\u062B\u0627\u0646\u064A\u0629"),
+                text: "ثانية",
             color: "#e20303",
             }
         }
